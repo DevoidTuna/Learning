@@ -10,10 +10,10 @@
 
     <title>Nova aba</title> <!--Título do navegador / guia da página OBS: Importante para mecanismo de pesquisa-->
 
-    <body>
+    <body bgcolor="black", text="white">
         <header> <!-- Tag: contêiner de cabeçalho que pode conter os elementos: tags de cabeçalho, logo, seções de cabeçalho e informações de autoria.-->
 
-            <h1>Introdução</h1>
+            <h1 id="inicio">Introdução</h1>
 
         </header>
 
@@ -79,10 +79,39 @@
         <i>i</i> <!--Sem semântica, apenas visual-->
         <b>b</b> <!--Sem semântica, apenas visual-->
 
+
+        <!----------------ATRIBUTOS----------------->
+
+        <!--
+            -Os atributos são definidos após o nome do elemento.
+
+            -Os atributos são formados pelo nome, um sinal de    igual e valor.
+
+            -O valor pode ficar dentro de aspas duplas "" ou aspas simples ''.
+        -->
+
+        <p id="fundador">DevoidTuna</p> <!--Identificador exclusivo-->
+
+        <p class="linguagens">PHP, HTML</p> <!--Identificador de grupos-->
+        
+        <p style="font-size: 30px; color:coral">Lorem Ipsum</p> <!--Estilo à um elemento-->
+
+        <a href="https://www.google.com">Link</a> <!--Links--> <br>
+
         
 
 
-        
+
+
+
+
+
+
+
+
+        <!--href também serve para redirecionar à um elemento âncora, mas antes é necessário definir um id para o elemento-->
+        <a href="#inicio">Volte ao topo</a>
+
         <br>
         <footer> <!-- Rodapé do documento ou seção. Geralmente são compostos por: informações sobre o autor; Direitos autorais; Links para documentos relacionados; Informações de contato.-->
             <p>DevoidTuna Company</p>
