@@ -11,11 +11,11 @@
 
     <title>Nova aba</title> <!--Título do navegador / guia da página OBS: Importante para mecanismo de pesquisa-->
 
-    <body bgcolor="black", text="white">
+    <body bgcolor="black", text="white" link="#ff7700" vlink="#ff7700">
+
         <header> <!-- Tag: contêiner de cabeçalho que pode conter os elementos: tags de cabeçalho, logo, seções de cabeçalho e informações de autoria.-->
 
             <h1 id="inicio">Introdução</h1>
-
         </header>
 
         <nav> <!--É utilizada para representar uma seção da página que contém um conjunto de links de navegação. Os mesmos são utilizados para navegar entre outras paginas ou para ir à outras áreas da página.-->
@@ -120,20 +120,70 @@
             Abra esta página <a href="tags.html" target="_blank">em outra aba</a> ou então <a href="tags.html" target="_self">por aqui mesmo</a>.
         </p>
 
+        <!--Listas não ordenadas: 3 estilos: circle, square e disc. type=""-->
 
+        <h3>Lista não ordenada</h3>
+        <ul type="circle"> <!--Lista não ordenada-->
+            <li>Carro</li>
+            <li>Moto</li>
+            <li>Avião</li>
+        </ul>
 
-        <!--href também serve para redirecionar à um elemento âncora, mas antes é necessário definir um id para o elemento-->
+        <!--Lista ordenada: 5 estilos: 1, A, a, I, i. type=""-->
+        <!--Alterar início da numeração: start=" dentro de <ol>"-->
+
+        <h3>Lista ordenada</h3>
+        <ol type="I" start="4"> <!--Lista ordenada-->
+            <li>Carro</li>
+            <li>Moto</li>
+            <li>Avião</li>
+        </ol>
+
+        <!--Lista de descrição-->
+        
+        <h3>Lista de Descrição</h3>
+        <dl>
+            <dt>HTML</dt>
+            <dd>HTML (Linguagem de Marcação de HiperTexto) é o bloco de construção mais básico da web.</dd>
+            <dt>JavaScript</dt>
+            <dd>JavaScript é uma linguagem de programação que permite a você implementar itens complexos em páginas web</dd>
+        </dl>
+        <br> <br>
+
+        <!--MULTIMÍDIA-->
+
+        <h2 align="center">Multimídia</h2>
+
+        <p align="center">
+            <img src="https://www.luiztools.com.br/wp-content/uploads/2018/09/javascript.png" alt="JavaScript" title="JavaScript">
+         <br>
+        </p>
+            
+        <h3>Orochi lançou essa ficando detido algumas horas, imagina 3 meses preso:</h3>
+        <p>
+            <video controls width="560" height="315">
+                <source src="./img/Orochi 'BALÃO'.mp4" type="video/mp4" >
+            </video>
+        </p> <br>
+        
+        <h3>Agora, o MegaFunk do Flamengo:</h3>
+
+        <audio controls width="560" height="315">
+            <source src="./img/MEGAFLAMENGOOO.mp3" type="audio/mp3">
+        </audio> <br>
+
+        <h3>E por último, segue oq eu escuto pra estudar e não perder o foco com as letras e etc:</h3>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/5qap5aO4i9A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> <br> <br>
+
+        <h2>E aqui se encerra as tags. Aproveite as multimídias do site e vamos rezar para que nenhum site caia. Amém!</h2>
+
+        <br> <!--href também serve para redirecionar à um elemento âncora, mas antes é necessário definir um id para o elemento-->
         <a href="#inicio">Volte ao topo</a>
 
         <br>
         <footer> <!-- Rodapé do documento ou seção. Geralmente são compostos por: informações sobre o autor; Direitos autorais; Links para documentos relacionados; Informações de contato.-->
-            <p>DevoidTuna Company</p>
+            <p>DevoidTuna Company 2022</p>
             <p>Todos os direitos reservados.</p>
         </footer>
-
-
     </body>
-
-
 </html>
-
