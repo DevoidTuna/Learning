@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+<body>
+    <header>
+        <h1>Cadastro de Dev</h1>
+        <ul>
+        <li>Preencha seu cadastro com suas informações para contato e seus conhecimentos</li>
+        </ul>
+    </header>
+
+    <form method="dialog">
+        <div>
+            <label>Nome Completo:</label>
+            <input type="text" name="nome" placeholder="Digite seu nome completo" required>
+        </div>
+        
+        <div>
+            <label>E-mail:</label>
+            <input type="email" name="email" placeholder="Digite seu e-mail" required>
+        </div>
+
+        <div>
+            <label>Telefone:</label>
+            <input type="tel" name="telefone" placeholder="(xx) x.xxxx-xxxx" required>
+        </div>
+
+        <div>
+            <label>Data de nascimento:</label>
+            <input type="date" name="nascimento" required>
+        </div>
+
+        <div>
+            <Label>Sexo:</Label>
+            <select name="sexo">
+                <option value="0" selected>Selecione..</option>
+                <option>Masculino</option>
+                <option>Feminino</option>
+                <option>Trans.. formers</option>
+                <option>Outro</option>
+            </select>
+        </div><br>
+
+        <div>
+            <label>Você é um desenvolvedor:</label>
+            <input type="radio" name="tipo_dev" id="1" checked>
+            <label for="1">Front-end</label>
+            <input type="radio" name="tipo_dev" id="2">
+            <label for="2">Back-end</label>
+            <input type="radio" name="tipo_dev" id="3">
+            <label for="3">FullStack</label>
+        </div><br>
+
+        <div>
+            <label>Quais linguagens você tem conhecimento <b>mediano</b>?</label><br>
+            <input type="checkbox" name="HTML" id="HTML">
+            <label for="HTML">HTML</label><br>
+            <input type="checkbox" name="C#" id="C#">
+            <label for="C#">C#</label><br>
+            <input type="checkbox" name="PHP" id="PHP">
+            <label for="PHP">PHP</label><br>
+            <input type="checkbox" name="PYTHON" id="PYTHON">
+            <label for="PYTHON">Python</label><br>
+            <input type="checkbox" name="JS" id="JS">
+            <label for="JS">JavaScript</label><br>
+            <input type="checkbox" name="Java" id="Java">
+            <label for="Java">Java</label><br>
+            <label>Outras:</label>
+            <input type="text" name="outras_linguagens">
+        </div><br>
+
+        <div>
+            <Label>Fale sobre você (opcional):</Label><br>
+            <textarea placeholder="Escreva aqui" cols="70" rows="8"></textarea>
+        </div>
+
+        <br>
+        <div>
+        <input type="image" src="./img/submit_enviar.gif" width="10%" alt="Enviar" title="Enviar">
+        </div>
+    </form>
+</body>
+</html>
