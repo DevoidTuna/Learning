@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscrever-se - Spotify</title>
+    <style type="text/CSS">
+        #logo { margin-top: 27px;}
+        #h1titulo {font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;}
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;}
+    </style>
+</head>
+<body align="center" link="#34c92c" vlink="#34c92c">
+    <header>
+        <img src="./midia/spotify-logo.png" width="10%" id="logo">
+        <br><br>
+        <h1 id="h1titulo">Inscreva-se grátis e comece a<br>curtir.</h1> <!--A fonte "Spotify" não tem aqui, peguei uma mais parecida-->
+    </header>
+    
+    <form> <!--Coloquei img pois o iframe em si o Spotify não me permite usar-->
+        <img src="./midia/log-facebook.png">
+        <br><br>
+        <img src="./midia/log-google.png">
+    </form>
+    <br><br>
+
+    <div>
+        <h5><b>Qual é o seu e-mail?</b></h5>
+        <form>
+            <input type="email" placeholder="Insira seu e-mail." class="box">
+        </form>
+        <a href="" target="_blank">Usar número de telefone.</a>
+    </div>
+    <div>
+        <h5><b>Confirme seu e-mail</b></h5>
+        <form>
+            <input placeholder="Insira o e-mail novamente." class="box" id="veri-email">
+        </form>
+    </div>
+    <div>
+        <h5>Crie uma senha</h5>
+        <form>
+            <input type="password" placeholder="Crie uma senha." class="box">
+        </form>
+    </div>
+    <div>
+        <h5>Como devemos chamar você?</h5>
+        <form>
+            <input placeholder="Insira um nome de perfil" class="box">
+        </form>
+        <p>Isso será exibido no seu perfil.</p class="txt">
+    </div>
+    <div>
+        <h5>Qual a sua data de nascimento?</h5>
+        <div>
+            <form>
+                <label>Dia</label>
+                <input type="text" placeholder="DD" class="box">
+            </form>
+        </div>
+        <div>
+            <form>
+                <label>Mês</label>
+                <select class="box">
+                    <option>Mês</option>
+                    <option>janeiro</option>
+                    <option>fevereiro</option>
+                    <option>março</option>
+                    <option>abril</option>
+                    <option>maio</option>
+                    <option>junho</option>
+                    <option>julho</option>
+                    <option>agosto</option>
+                    <option>setembro</option>
+                    <option>outubro</option>
+                    <option>novembro</option>
+                    <option>dezembro</option>
+                </select>
+            </form>
+        </div>
+        <div>
+            <form>
+                <label>Ano</label>
+                <input type="text" placeholder="AAAA" class="box">
+            </form>
+        </div>
+    </div>
+    <div>
+        <h5>Qual é seu gênero?</h5>
+        <form>
+           <input type="radio" name="sexo" id="1">
+           <label for="1">Masculino</label>
+           <input type="radio" name="sexo" id="2">
+           <label for="2">Feminino</label>
+           <input type="radio" name="sexo" id="3">
+           <label for="3">Não binário</label>
+        </form>
+    </div>
+    <br>
+    <div>
+        <form>
+            <input type="checkbox"> Não quero receber mensagens de marketing do Spotify<br><br><br>
+            <input type="checkbox"> Compartilhar meus dados cadastrais com os provedores de<br>conteúdo do Spotify para fins de marketing.<br><br><br>
+            <input type="checkbox" required> Eu concordo com os <a href="https://www.spotify.com/br/legal/end-user-agreement/" target="_blank">Termos e Condições de Uso do Spotify</a>.<br><br><br>
+        </form>
+    </div>
+    <script type="text/javascript" src="https://www.google.com/recaptcha/api/challenge?k=your_public_key"></script> <!--Colei o ReCAPTCHA do google mas acho q nao funciona se nao for https kkkkk-->
+    <noscript>
+        <iframe src="https://www.google.com/recaptcha/api/noscript?k=your_public_key"
+            height="300" width="500" frameborder="0"></iframe><br>
+        <textarea name="recaptcha_challenge_field" rows="3" cols="40">
+        </textarea>
+        <input type="hidden" name="recaptcha_response_field"
+            value="manual_challenge">
+     </noscript>
+     <br><br>
+     <small>Para saber mais sobre como o Spotify coleta, utiliza, compartilha e protege<br>seus dados pessoais, leia a <a href="https://www.spotify.com/br/legal/privacy-policy/" target="_blank">Política de Privacidade do Spotify</a>.</small><br><br>
+
+     <form>
+         <input type="image" src="./midia/submit.png">
+     </form>
+     <p>Já tem uma conta? <a href="Spotify.html">Faça Login</a>.</p>
+     <br><br><br><br><br><br>
+</body>
+</html>
