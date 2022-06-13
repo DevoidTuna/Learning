@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap');
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+    background: -webkit-linear-gradient(top, rgb(26, 26, 26) 0%, rgba(8,8,8,1) 100%);
+    background-repeat: repeat;
+    background-attachment: fixed;
+    margin: 0px;
+}
+
+header {
+    display: inline-block;
+    width: 100%;
+    background: -webkit-linear-gradient(top, rgba(54,0,148,1) 0%, rgba(32,0,87,1) 90%, rgba(32,0,87,1) 100%);
+    border-bottom: 20px;
+    box-shadow: 0px -30px 11px 36px rgba(0,0,0,0.75);
+}
+
+#titulo {
+    font-family: 'Dancing Script', cursive;
+    text-align: center;
+    font-size: 100px;
+    margin-bottom: 0px;
+    margin-top: 5px;
+}
+
+#intrd {
+    font-size: 12px;
+    text-align: center;
+    margin-top: 0px;
+}
+
+.container {
+    margin-left: auto; margin-right: auto; width: 1020px; margin-top: 50px;
+}
+
+.subtitle {
+    margin-top: 30px; 
+    margin-bottom: 0px;
+}
+
+.container .box {
+    display : inline-flex;
+   flex-direction : row;
+ }
+
+ .box {
+     margin-top: 5px;
+ }
+
+ 
+.box-esquerda {
+     width: 120px;
+     margin-left: 10px;
+  }
+
+.box-centro {
+    margin-left: 220px;
+    width: 340px;
+}
+
+.box-direita {
+    margin-left: 5px;
+}
+
+input {
+    margin-top: 5px;
+}
+
+#dia-nasc {
+    width: 55px;
+    height: 34px;
+}
+
+#mes-nasc {
+    width: 147px;
+    height: 37px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+#ano-nasc {
+    width: 65px;
+    height: 34px;
+}
+
+[type="text"], [type="number"] {
+    height: 34px;
+    width: 290px;
+    font-size: 16px;
+    text-indent: 5px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+#masc, #fem, #neutro {
+    margin-top: 2px;
+}
+

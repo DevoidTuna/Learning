@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="/PROJETOS/CSS/Cadastro-simples.css">
+</head>
+<body>
+    <header>
+        <h1 id="titulo">Cadastro de Cliente</h1>
+        <p id="intrd">Preencha com as informações do cliente para cadastrá-lo no sistema de descontos e vantagens.</p>
+    </header>
+
+    <form id="form-principal" >
+        <div class="container">
+            <ul><li><h3 class="subtitle">Informações</h3></li></ul>
+            <div class="box">
+                <div class="box-esquerda">
+                    <label for="nome">Nome completo</label>
+                    <div>
+                        <input type="text" name="nome" placeholder="Digite seu nome aqui" id="nome">
+                    </div>
+                    <label for="CPF" class="sub-subtitle">CPF</label>
+                    <div>
+                        <input type="number" name="CPF" id="CPF" placeholder="Digite seu CPF">
+                    </div>
+                </div>
+                <div class="box-centro">
+                    <label for="nasc">Data de Nascimento</label>
+                    <div name="nasc">
+                        <input type="text" name="dia" placeholder="DD" id="dia-nasc">
+                        <select id="mes-nasc">
+                            <option selected>MES</option>
+                            <option>janeiro</option>
+                            <option>fevereiro</option>
+                            <option>março</option>
+                            <option>abril</option>
+                            <option>maio</option>
+                            <option>junho</option>
+                            <option>julho</option>
+                            <option>agosto</option>
+                            <option>setembro</option>
+                            <option>outubro</option>
+                            <option>novembro</option>
+                            <option>dezembro</option>
+                        </select>
+                        <input type="text" name="ano" placeholder="AAAA" id="ano-nasc">
+                    </div>
+                    <label for="RG" class="sub-subtitle">RG</label>
+                    <div>
+                        <input type="number" name="RG" id="RG" placeholder="Digite o RG">
+                    </div>
+                </div>
+                <div class="box-direita">
+                    <label>Sexo</label>
+                    <div>
+                        <input type="radio" name="sexo" id="masc">
+                        <label for="masc">Masculino</label><br>
+                        <input type="radio" name="sexo" id="fem">
+                        <label for="fem">Feminino</label><br>
+                        <input type="radio" name="sexo" id="neutro">
+                        <label for="neutro">Não binário</label>
+                    </div>
+                </div>
+            </div>
+            <ul><li><h3 class="subtitle">Endereço</h3></li></ul>
+            <div class="box">
+                <div class="box-esquerda">
+                    <label for="estado">Estado</label>
+                    <div>
+                        <input type="text" id="estado" placeholder="Ex: Santa Catarina">
+                    </div>
+                </div>
+                <div class="box-centro">
+                    <label for="cidade">Cidade</label>
+                    <div>
+                        <input type="text" id="cidade" placeholder="Ex: Florianópolis">
+                    </div>
+                </div>
+                <div class="box-direita">
+                    <label for="bairro">Bairro</label>
+                    <div>
+                        <input type="text" id="bairro" placeholder="Digite o bairro">
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <div class="box-esquerda">
+                    <label for="rua">Rua</label>
+                    <div>
+                        <input type="text" id="rua" placeholder="Nome da rua">
+                    </div>
+                </div>
+                <div class="box-centro">
+                    <label for="num-e-compl">Número e complemento</label>
+                    <div>
+                        <input type="text" id="num-e-compl" placeholder="Ex: 181, edifício Alves AP 101">
+                    </div>
+                </div>
+                <div class="box-direita" style=" visibility: hidden;"></div>
+            </div>
+            
+        </div>
+    </form>
+</body>
+</html>
