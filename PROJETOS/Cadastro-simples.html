@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dev Company | Associe-se</title>
-    <link rel="stylesheet" href="/PROJETOS/CSS/Cadastro-simples.css">
+    <link rel="stylesheet" href="CSS/Cadastro-simples.css">
 </head>
 <body>
     <div id="cabecalho">
@@ -14,49 +14,70 @@
             <p id="intrd">A companhia de apenas um homem.</p>
         </header>
     </div>
-
     <div id="corpo">
         <p class="subtitle">Associe-se para acabar com o rodapé da marca</p>
-        <h3>Informações</h3>
         <form>
             <div class="divisoes">
+                <h3>Informações</h3>
                 <div class="formulario">
-                    <label for="nome">Nome completo:</label>
-                    <input type="text" name="nome" id="nome" placeholder="Seu nome">
+                    <label for="nome">Nome completo</label>
+                    <input type="text" name="nome" id="nome" placeholder="Seu nome" required>
                 </div>
-
                 <div class="formulario">
-                    <label for="cpf">CPF:</label>
-                    <input type="number" name="cpf" id="cpf" placeholder="999.999.999-98">
+                    <label for="cpf">CPF</label>
+                    <input type="number" name="cpf" id="cpf" placeholder="999.999.999-98" required>
                 </div>
-
                 <div class="formulario">
-                    <label for="nasc">Data de nascimento</label>
-                    <div id="nasc">
-                        <input type="number" name="nasc-dia" id="nasc-dia" placeholder="DD">
-
+                    <label for="sexo" id="titulo-sexo">Sexo:</label>
+                    <div id="sexo">
+                        <input type="radio" name="sexo" id="sexo-masc" required>
+                        <label for="sexo-masc">Masculino</label>
+                        <input type="radio" name="sexo" id="sexo-fem">
+                        <label for="sexo-fem">Feminino</label>
+                        <input type="radio" name="sexo" id="sexo-nb">
+                        <label for="sexo-nb">Não binário</label>
                     </div>
-                    
                 </div>
                 <div class="formulario">
-                    <label for="nome">Nome completo:</label>
-                    <input type="text" name="nome" id="nome" placeholder="Seu nome">
-                </div>
-                <div class="formulario">
-                    <label for="nome">Nome completo:</label>
-                    <input type="text" name="nome" id="nome" placeholder="Seu nome">
-                </div>
-                <div class="formulario">
-                    <label for="nome">Nome completo:</label>
-                    <input type="text" name="nome" id="nome" placeholder="Seu nome">
-                </div>
-                <div class="formulario">
-                    <label for="nome">Nome completo:</label>
-                    <input type="text" name="nome" id="nome" placeholder="Seu nome">
+                    <label for="nasc">Data de nascimento:</label>
+                    <input type="date" name="nasc" id="nasc" required>
                 </div>
             </div>
-
-
+            <div class="divisoes">
+                <h3>Contato</h3>
+                <div class="formulario">
+                    <label for="telefone">Telefone</label>
+                    <input type="number" name="telefone" id="telefone" placeholder="(xx) xxxx-xxxx">
+                </div>
+                <div class="formulario">
+                    <label for="celular">Celular</label>
+                    <input type="number" name="celular" id="celular" placeholder="(xx) x xxxx-xxxx" required>
+                </div>
+                <div class="formulario">
+                    <label for="email">E-mail</label>
+                    <input type="email" name="email" id="email" placeholder="nome@example.com" required>
+                </div>
+            </div>
+            <div class="divisoes">
+                <h3>Nos (me) conte sobre você</h3>
+                <div class="formulario">
+                    <textarea name="sobre" id="sobre" cols="70" rows="8" placeholder="Opcional"></textarea>
+                </div>
+            </div>
+            <div class="divisoes">
+                <h3>Entre em contato comigo</h3>
+                <div class="formulario">
+                    <a href="mailto:patrick.brining@outlook.com?subject=Contato - Dev Company&body=" class="botao-contato" target="_blank">E-MAIL</a>
+                    <a href="https://contate.me/PatrickBrining" class="botao-contato" id="wpp" target="_blank">WhatsApp</a>
+                </div>
+            </div>
+            <div id="rodape">
+                <input type="checkbox" name="termos" id="termos" required>
+                <label for="termos">Declaro que concordo com os <a href="#">termos de uso</a>.</label>
+                <br>
+                <p>*Caso seja aceito na companhia, entraremos em contato via e-mail.</p>
+                <input type="submit" name="submit" id="submit" value="Inscrever-se">
+            </div>
         </form>
     </div>
 </body>

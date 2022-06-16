@@ -20,7 +20,7 @@ div {
 }
 
 header {
-    margin-left: auto; margin-right: auto; width: 410px;
+    margin-left: auto; margin-right: auto; width: 425px;
 }
 
 #titulo {
@@ -46,13 +46,56 @@ header {
 
 .subtitle {
     font-family: 'Dancing Script', cursive;
-    font-size: 36px;
+    font-size: 230%;
     margin-top: 0px;
     margin-left: 40px;
 }
 
-[type="text"], [type="number"] {
+.formulario {
+    margin: 0px 20px 15px 0px;
+}
+
+#cpf {
+    width: 135px;
+}
+
+#nasc {
+    width: 130px;
+}
+
+.divisoes {
+    width: 48%;
+    min-width: 530px;
+    max-width: 750px;
+    max-height: 222px;
+    display: inline-table;
+}
+
+h3 {
+    border-left: 2px solid rgb(58, 0, 158);
+    padding-left: 4px;
+}
+
+p {
+    font-size: small;
+    margin-top: 5px;
+}
+
+textarea {
+    text-indent: 5px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    text-indent: 5px;
+    border-radius: 7px;
+    border: 0px;
+    color: white;
+    background-color: rgb(27, 27, 27);
+    border: 1px solid rgb(58, 0, 158);
+}
+
+[type="text"], [type="number"], [type="date"], [type="email"] {
     margin-left: 3px;
+    margin-bottom: 7px;
     height: 30px;
     width: 230px;
     font-size: 16px;
@@ -61,35 +104,122 @@ header {
     border: 0px;
     color: white;
     background-color: rgb(27, 27, 27);
-    border: 1px solid white;
+    border: 1px solid rgb(58, 0, 158);
 }
 
-.formulario {
-    margin: 0px 20px 15px 0px;
+[type="text"]:hover, [type="number"]:hover, [type="date"]:hover, [type="email"]:hover {
+    background-color: rgba(32,0,87,1);
 }
 
-[type="text"]:hover, [type="number"]:hover {
-    background-color: rgb(255, 255, 255);
-    color: black;
+[type=number]::-webkit-inner-spin-button, [type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
 }
 
-[type="number"] {
-    
+[type=date]::-webkit-inner-spin-button, [type=date]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
 }
 
-#cpf {
-    width: 135px;
+input[type="radio"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #999;
+    transition: 0.1s all linear;
+    margin-right: 5px;
+    position: relative;
+    top: 4px;
+}
+  
+input:checked {
+    border: 7.5px solid rgb(58, 0, 158);
 }
 
-#nasc-dia {
-    width: 50px;
+#telefone, #celular {
+    width: 140px;
 }
 
-.divisoes {
-    width: 45%;
+#email {
+    width: 395px;
 }
 
-h3 {
-    border-left: 2px solid white;
-    padding-left: 4px;
+#titulo-sexo {
+    display: inline-block;
+}
+
+#sexo {
+    display: -webkit-inline-box;
+    width: 140px;
+    margin-right: 60px;
+}
+
+#rodape {
+    display: block;
+    margin-top: 50px;
+}
+
+[type="checkbox"] {
+    width: 14px;
+    height: 14px;
+}
+
+[type="checkbox"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #999;
+    transition: 0.1s all linear;
+    margin-right: 5px;
+    position: relative;
+    top: 4px;
+}
+[type="checkbox"]:checked {
+    border: 8px solid rgb(58, 0, 158);
+}
+
+a {
+    text-decoration: none;
+    color: rgb(94, 1, 255);
+}
+
+::selection {
+    background-color: rgb(58, 0, 158);
+}
+
+#submit {
+    margin-top: 15px;
+    width: 150px;
+    height: 40px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    font-weight: 900;
+    background-color: rgb(48, 1, 129);
+    color: white;
+    cursor: pointer;
+    border: 0px;
+}
+
+#submit:hover {
+    background-color: rgba(58, 0, 158, 0.637);
+}
+
+.botao-contato {
+    display: inline-block;
+    margin-right: 10px;
+    background-color: rgb(48, 1, 129);
+    color: white;
+    padding: 15px 60px 15px 60px;
+    font-weight: 900;
+}
+
+#wpp {
+    padding: 15px 44.5px 15px 44.5px;
+}
+
+.botao-contato:hover {
+    background-color: rgba(58, 0, 158, 0.637);
 }
