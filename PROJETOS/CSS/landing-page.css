@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Great+Vibes&family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Montserrat', sans-serif;
+}
+.cabecalho {
+    z-index: 999;
+    position: fixed;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 0px;
+    background-color: white;
+    box-shadow: 0px -35px 11px 36px rgba(0,0,0,0.75);
+    align-content: center;
+    align-items: center;
+}
+.logo {
+    display: inline-block;
+    font-family: 'Lobster', cursive;
+    font-size: 22px;
+    margin-left: 10%; 
+    flex: 20%;
+    cursor: default;
+}
+.cabecalho-botoes {
+    display: inline-block;
+    margin-right: 10%;
+    flex: 60%;
+    padding: 16px 20px;
+    text-align: right;
+}
+.cabecalho-link {
+    text-decoration: none;
+    color: black;
+    font-size: large;
+    font-weight: 900;
+    margin-right: 15px;
+    padding: 10px;
+}
+.cabecalho-link:hover {
+    border-top: 2px solid rgb(58, 0, 158);
+    color: rgb(58, 0, 158);
+}
+.cabecalho-btn {
+    background-color: rgb(58, 0, 158);
+    border-radius: 4px;
+    text-decoration: none;
+    color: white;
+    padding: 13px;
+    margin-left: 50px;
+}
+.cabecalho-btn:hover, .contrate-btn:hover {
+    opacity: 0.9;
+}
+.redline {
+    padding-top: 130px;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.texto {
+    margin-left: 10%;
+    flex: 40%;
+}
+h2 {
+    font-size: 20px;
+    margin: 3px;
+}
+.texto p {
+    width: 90%;
+    color: gray;
+}
+.agencia-txt {
+    font-size: 80px;
+    font-weight: 900;
+}
+.contrate-btn {
+    display: inline-block;
+    margin-top: 3px;
+    padding: 20px;
+    text-decoration: none;
+    color: white;
+    font-weight: 800;
+    background-color: rgb(58, 0, 158);
+    border-radius: 4px;
+}
+.img {
+    text-align: center;
+    size: 100%;
+    margin-right: 10%;
+    flex: 40%;
+}
+#servicos {
+    flex: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+#servicos h2 {
+    text-align: center;
+    font-family: 'Dancing Script', cursive;
+    font-size: 70px;
+    height: 100px;
+    flex: 100%;
+}
+.espaco {
+    height: 140px;
+}
+.card {
+    display: block;
+    margin-bottom: 100px;
+    text-align: justify;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+.card:after {
+    content: '';
+    display: inline-block;
+    width: 100%;
+    height: 0;
+}
+.cards {
+    text-align: center;
+    display: inline-block;
+    margin-top: 35px;
+    border: 2px solid rgb(58, 0, 158);
+    border-radius: 12px;
+    width: 28%;
+    box-shadow: 3px 3px 3px;
+    margin-bottom: 35px;
+}
+.cards h3 {
+    font-weight: 700;
+}
+.cards p {
+    text-indent: 3px 3px;
+}
+.rodape {
+    display: block;
+    margin: 0px;
+    padding: 0px;
+    background: -webkit-linear-gradient(top, rgb(26, 26, 26) 0%, rgba(8,8,8,1) 100%);
+    height: 230px;
+    color: white;
+    text-align: center;
+    border-top: 5px solid rgb(58, 0, 158);
+}
+.logo-rodape {
+    padding-top: 1%;
+    font-family: 'Dancing Script', cursive;
+    font-size: 50px;
+}
+.direitos {
+    padding-top: 3%;
+}
+.cards:hover {
+    background-color: rgb(58, 0, 158);
+    color: white;
+}
+.whats {
+    position: fixed;
+    bottom: 11px;
+    right: 11px;
+}
+.whats img {
+    height: 70px;
+}
