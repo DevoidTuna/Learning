@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+</head>
+<body>
+    <h1>Sua Nacionalidade</h1>
+    Seu país: <input type="text" name="pais" id="txtveri">
+    <input type="button" value="verificar" onclick="verificar()">
+    <p id="msg1"></p>
+    <p id="msg2"></p>
+    <script>
+         function verificar() {
+            var txt1 = window.document.getElementById('msg1')
+            var txt2 = window.document.getElementById('msg2')
+            var veri = window.document.getElementById('txtveri')
+
+            
+            if (veri.value.toUpperCase() == 'BRASIL') {
+                txt1.innerHTML = `Você nasceu em ${veri.value.toUpperCase()}!`
+                txt2.innerHTML = 'Você é BRASILEIRO!'
+            } else {
+                txt1.innerHTML = `Você nasceu em ${veri.value.toUpperCase()}!`
+                txt2.innerHTML = 'Você é ESTRANGEIRO!'
+            }
+         }
+    </script>
+</body>
+</html>
