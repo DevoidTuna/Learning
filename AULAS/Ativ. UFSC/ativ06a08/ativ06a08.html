@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividades 06 a 08</title>
+    <link rel="stylesheet" href="./modelocss.css">
+</head>
+<body>
+    <header>
+        <h1>Atividades 06 a 08</h1>
+    </header>
+    <section>
+         <div>
+            <label for="c">Temperatura em Celsius °C: </label>
+            <input type="number" name="c" id="c">
+            <input type="button" value="Converter" onclick="converter()">
+         </div>
+         <div>
+            <p id="res1">Informe acima a temperatura em °C e clique em converter para receber temperatura em °F.</p>
+         </div>
+    </section>
+    <section>
+        <div>
+            <h3>Removendo 1° e ultima letra da palavra</h3>
+            <label for="txt2">Palavra:</label>
+            <input type="text" name="txt2" id="txt2">
+            <input type="button" value="Formatar" onclick="formatar()">
+        </div>
+        <div><p id="res2"></p></div>
+    </section>
+    <section>
+        <div>
+            <h3>Qual a região fiscal de seu CPF</h3>
+            <label for="cpf">CPF (apenas números): </label>
+            <input type="number" name="cpf" id="cpf">
+            <input type="button" value="verificar" onclick="verificar()">
+        </div>
+        <div><p id="res3"></p></div>
+    </section>
+    <footer>
+        <p>Atividades da UFSC</p>
+    </footer>
+    <script src="./modeloscript.js"></script>
+</body>
+</html>

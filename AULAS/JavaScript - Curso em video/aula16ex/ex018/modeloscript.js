@@ -26,6 +26,7 @@ function adicionar() {
             window.alert('[ERRO] Número já adicionado.')
         } else {
             addtxt(numero)
+            numero.focus()
         }
     }
 }
