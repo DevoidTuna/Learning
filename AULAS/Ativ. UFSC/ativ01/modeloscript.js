@@ -28,5 +28,6 @@ function relogio() {
     if (segundo < 10) {segundo = '0' + segundo}
 
     horatxt.innerHTML = `${hora} ${am_pm} : ${minuto}m : ${segundo}s`
-    setInterval(relogio, 1000)
 }
+relogio()
+setInterval(relogio, 333)
