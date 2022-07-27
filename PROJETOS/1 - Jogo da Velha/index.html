@@ -8,61 +8,27 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <header>
-        <h1 class="titulo">JOGO DA VELHA</h1>
-        <h3 class="sub-titulo">DIVIRTA-SE!</h3>
-    </header>
-
     <section id="menu">
-        <h2 id="tit-menu">MENU</h2>
-        <div id="modos-jogo">
-            <input type="button" value="MULTIPLAYER LOCAL" class="modos-btn" onclick="modoMultiplayer()"><br>
-            <input type="button" value="SINGLEPLAYER (FACIL)" class="modos-btn" onclick="modoSingleplayerFacil()"><br>
-            <input type="button" value="SINGLEPLAYER (DIFICIL)" class="modos-btn" onclick="modoSingleplayerDificil()"><br>
-        </div>
-        <div id="nome-jogadores" style="display: none;">
-            <label for="nome-player1">PLAYER 1: </label>
-            <input type="text" name="nome-player1" id="nome-player1" value="JOGADOR 1" class="nomes-jogadores">
-            <label for="nome-player2">PLAYER 2: </label>
-            <input type="text" name="nome-player2" id="nome-player2" value="JOGADOR 2" class="nomes-jogadores"><br>
-            <input type="button" value="JOGAR" onclick="jogar()" id="btn-jogar">
-        </div>
+        <h2>menu</h2>
+        <input type="button" value="multiplayer" id="btn-multiplayer">
+        <input type="button" value="singleplayer" id="btn-singleplayer">
     </section>
-
-    <section id="jogo" style="display: none;">
-
-        <h2 id="status">BOM JOGO!</h2>
-        <input type="button" value="ZERAR" onclick="zerar()" class="btn-zerar"><br>
-        <input type="button" value="MENU" onclick="menu()" class="btn-menu" style="display: none;">
-        <input type="button" value="REINICIAR" onclick="reiniciar()" class="btn-reiniciar" style="display: none;">
-
-        <div id="placar">
-            <h3 id="player1">JOGADOR 1: 0 PTS</h3>
-            <h3 id="player2">JOGADOR 2: 0 PTS</h3>
+    <section id="jogo">
+        <h2 id="status">status</h2>
+        <h2 id="vez">vez</h2>
+        <div id="tabela">
+            <input type="button" value="" class="bloco" onclick="clicar(0)">
+            <input type="button" value="" class="bloco" onclick="clicar(1)">
+            <input type="button" value="" class="bloco" onclick="clicar(2)"><br>
+            <input type="button" value="" class="bloco" onclick="clicar(3)">
+            <input type="button" value="" class="bloco" onclick="clicar(4)">
+            <input type="button" value="" class="bloco" onclick="clicar(5)"><br>
+            <input type="button" value="" class="bloco" onclick="clicar(6)">
+            <input type="button" value="" class="bloco" onclick="clicar(7)">
+            <input type="button" value="" class="bloco" onclick="clicar(8)">
         </div>
-
-        <table>
-            <tr>
-                <td id="b1" class="bloco" onclick="colocar()"></td>
-                <td id="b2" class="bloco" onclick="colocar()"></td>
-                <td id="b3" class="bloco" onclick="colocar()"></td>
-            </tr>
-            <tr>
-                <td id="b4" class="bloco" onclick="colocar()"></td>
-                <td id="b5" class="bloco" onclick="colocar()"></td>
-                <td id="b6" class="bloco" onclick="colocar()"></td>
-            </tr>
-            <tr>
-                <td id="b7" class="bloco" onclick="colocar()"></td>
-                <td id="b8" class="bloco" onclick="colocar()"></td>
-                <td id="b9" class="bloco" onclick="colocar()"></td>
-            </tr>
-        </table><br>
-
-        <input type="button" value="MENU" onclick="menu()" class="btn-menu">
-
+        
     </section>
-
     <script src="./script.js"></script>
 </body>
 </html>
