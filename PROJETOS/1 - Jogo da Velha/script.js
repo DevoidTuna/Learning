@@ -10,6 +10,8 @@ var posicoes = [
     0, 0, 0,
     0, 0, 0
 ]
+pontosX = 0
+pontosO = 0
 const posicoesVitoria = [
     [0, 1, 2],
     [3, 4, 5],
@@ -22,6 +24,23 @@ const posicoesVitoria = [
 ]
 var ganhador = '_'
 
+
+function clicar(i) {
+    if(bloco[i].value == '' && ganhador == '_') {
+        if(jogador == 'X') {
+            bloco[i].value = jogador
+            posicoes[i] = i = 1
+        } else {
+            bloco[i].value = jogador
+            posicoes[i] = i = -1
+        }
+        checagem()
+        alternador()
+        vez.innerHTML = jogador
+        statusTXT.innerHTML = posicoes
+    }
+}
+
 function alternador() {
     if(jogador == 'X') {
         return jogador = 'O'
@@ -30,20 +49,14 @@ function alternador() {
     }
 }
 
-for(let a = 0; a < 9; a++) {
-    function clicar(i) {
-        if(bloco[i].value == '' && ganhador == '_') {
-            if(jogador == 'X') {
-                posicoes[i] = i = 1
-            } else {
-                posicoes[i] = i = -1
-            }
-            bloco[i].value = jogador
-            alternador()
-            vez.innerHTML = jogador
-            statusTXT.innerHTML = posicoes
-            checarVencedor()
+
+function checagem() {
+    if(posicoes[0] == posicoes[1] && posicoes[1] == posicoes[2]) {
+        statusTXT.innerHTML = `Vitória ${jogador}`
+        if(posicoes[0] === -1) {
+            pontosO += 1
+        } else {
+            pontosX += 1
         }
     }
 }
-
