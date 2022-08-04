@@ -9,13 +9,12 @@
 </head>
 <body>
     <section id="menu">
-        <h2>menu</h2>
-        <input type="button" value="multiplayer" id="btn-multiplayer">
-        <input type="button" value="singleplayer" id="btn-singleplayer">
+        <h2>BOM JOGO!</h2>
     </section>
     <section id="jogo">
-        <h2 id="status">status</h2>
-        <h2 id="vez">vez</h2>
+        <h2 id="pontosX" class="pontos txt">Pontos X: 0</h2>
+        <h2 id="pontosO" class="pontos txt">Pontos O: 0</h2>
+        <h2 id="status" class="txt">Bom jogo!</h2>
         <div id="tabela">
             <input type="button" value="" class="bloco" onclick="clicar(0)">
             <input type="button" value="" class="bloco" onclick="clicar(1)">
@@ -26,6 +25,9 @@
             <input type="button" value="" class="bloco" onclick="clicar(6)">
             <input type="button" value="" class="bloco" onclick="clicar(7)">
             <input type="button" value="" class="bloco" onclick="clicar(8)"><br>
+        </div>
+        <div id="rodape">
+            <input type="button" value="REINICIAR" id="btn-reiniciar-rodape" onclick="reiniciar()">
         </div>
     </section>
     <script src="./script.js"></script>

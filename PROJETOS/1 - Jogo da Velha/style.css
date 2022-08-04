@@ -6,15 +6,74 @@
 }
 
 .bloco {
-    border: 0.1px solid white;
+    border: 1px solid ghostwhite;
     width: 150px;
     height: 150px;
+    margin-bottom: 4px;
     background-color: black;
     color: white;
+    font-size: 100px;
 }
 
 body {
-    background-color: black;
+    background-color: rgb(26, 26, 26);
     color: white;
+    margin-left: 20px;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+#btn-reiniciar-rodape {
+    width: 120px;
+    height: 40px;
+    font-size: 16px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 600;
+    background-color: rgb(114, 54, 54);
+    color: black;
+    border-radius: 4px;
+}
+
+#btn-reiniciar-rodape:hover {
+    cursor: pointer;
+    box-shadow: 2px 2px 10px 2px black;
+}
+
+#rodape {
+    display: block;
+}
+
+#tabela {
+    margin: 30px 0px;
+    min-width: 470px;
+}
+
+#menu {
+    margin-bottom: 80px;
+    margin-top: 10px;
+    font-size: 30px;
+}
+
+.txt {
+    margin-bottom: 10px;
+}
+
+.pontos {
+    display: inline-block;
+}
+
+#pontosX {
+    margin-right: 20px;
+    border-bottom: 2px solid red;
+    border-radius: 3px;
+}
+
+#pontosO {
+    margin-left: 20px;
+    border-bottom: 2px solid blue;
+    border-radius: 3px;
+}
+
+#status {
+    font-size: 40px;
+}
