@@ -14,7 +14,7 @@ var pontosO = 0
 reiniciar()
 
 function clicar(i) {
-    if(bloco[i].value == '') {
+    if(bloco[i].value == ' ') {
         bloco[i].value = jogador
         alternador()
         statusTXT.innerHTML = `${jogador}`
@@ -139,9 +139,9 @@ function checagem() {
             destaque(bloco[2], bloco[4], bloco[6])
         }
 
-    } else if((bloco[0].value != '') && (bloco[1].value != '') && (bloco[2].value != '')
-    && (bloco[3].value != '') && (bloco[4].value != '') && (bloco[5].value != '')
-    && (bloco[6].value != '') && (bloco[7].value != '') && (bloco[8].value != '')) {
+    } else if((bloco[0].value != ' ') && (bloco[1].value != ' ') && (bloco[2].value != ' ')
+    && (bloco[3].value != ' ') && (bloco[4].value != ' ') && (bloco[5].value != ' ')
+    && (bloco[6].value != ' ') && (bloco[7].value != ' ') && (bloco[8].value != ' ')) {
         statusTXT.innerHTML = 'EMPATE'
         statusTXT.style.color = 'yellow'
         for(let i = 0; i < 9; i++) {
@@ -177,7 +177,7 @@ function destaque(x, y, z) {
 function reiniciar() {
     for(let i = 0; i <9; i++) {
         bloco[i].disabled = false
-        bloco[i].value = ''
+        bloco[i].value = ' '
         bloco[i].style.color = 'white'
         statusTXT.style.color = 'white'
         btnReiniciar.style.color = 'black'
