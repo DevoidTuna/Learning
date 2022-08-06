@@ -27,7 +27,6 @@ const posicoesVitoria = [
     [2, 4, 6]
 ]
 
-
 reiniciar()
 
 function clicar(i) {
@@ -39,23 +38,27 @@ function clicar(i) {
             posicoes[i] -= 1
         }
         alternador()
-        statusTXT.innerHTML = `${jogador}`
+        statusTXT.innerHTML = jogador
     }
     checagem()
-    pontosXTXT.innerHTML = `Pontos X: ${pontosX}`
-    pontosOTXT.innerHTML = `Pontos O: ${pontosO}`
+    pontosXTXT.innerHTML = pontosX
+    pontosOTXT.innerHTML = pontosO
 }
 
 function checagem() {
     for(let i = 0; i < 8; i++) {
         let check = posicoes[posicoesVitoria[i][0]] + posicoes[posicoesVitoria[i][1]] + posicoes[posicoesVitoria[i][2]]
-        let empate = (posicoes.every( (e) => e != 0))
+        let empate = posicoes.every(e => (e) != 0 && check < 3 && check > -3)
         if(check == 3) {
             statusTXT.innerHTML = 'Vitória X'
+            pontosX += 1
             destaque(bloco[posicoesVitoria[i][0]], bloco[posicoesVitoria[i][1]], bloco[posicoesVitoria[i][2]])
+            break
         } else if(check == -3) {
             statusTXT.innerHTML = 'Vitória O'
+            pontosO += 1
             destaque(bloco[posicoesVitoria[i][0]], bloco[posicoesVitoria[i][1]], bloco[posicoesVitoria[i][2]])
+            break
         } else if(empate == true) {
             statusTXT.innerHTML = 'EMPATE'
             statusTXT.style.color = 'yellow'
@@ -85,8 +88,6 @@ function quemComeca() {
         return jogador = 'X'
     }
 }
-
-
 
 function destaque(x, y, z) {
     for(let i = 0; i < 9; i++) {

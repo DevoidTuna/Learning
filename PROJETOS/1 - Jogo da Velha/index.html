@@ -12,20 +12,34 @@
         <h2>BOM JOGO!</h2>
     </section>
     <section id="jogo">
-        <h2 id="pontosX" class="pontos txt">Pontos X: 0</h2>
-        <h2 id="pontosO" class="pontos txt">Pontos O: 0</h2>
         <h2 id="status" class="txt">Bom jogo!</h2>
-        <div id="tabela">
-            <input type="button" value=" " class="bloco" onclick="clicar(0)">
-            <input type="button" value=" " class="bloco" onclick="clicar(1)">
-            <input type="button" value=" " class="bloco" onclick="clicar(2)"><br>
-            <input type="button" value=" " class="bloco" onclick="clicar(3)">
-            <input type="button" value=" " class="bloco" onclick="clicar(4)">
-            <input type="button" value=" " class="bloco" onclick="clicar(5)"><br>
-            <input type="button" value=" " class="bloco" onclick="clicar(6)">
-            <input type="button" value=" " class="bloco" onclick="clicar(7)">
-            <input type="button" value=" " class="bloco" onclick="clicar(8)"><br>
+        <div id="jogo-container">
+            <div id="jogador1div">
+                <h2 id="pontosX" class="pontos txt">0</h2><br>
+                <div id="X">X
+                    <input type="text" name="jogador1" id="jogador1" value="Jogador X">
+                </div>
+            </div>
+            <div id="tabela">
+                <input type="button" value=" " class="bloco" onclick="clicar(0)">
+                <input type="button" value=" " class="bloco" onclick="clicar(1)">
+                <input type="button" value=" " class="bloco" onclick="clicar(2)"><br>
+                <input type="button" value=" " class="bloco" onclick="clicar(3)">
+                <input type="button" value=" " class="bloco" onclick="clicar(4)">
+                <input type="button" value=" " class="bloco" onclick="clicar(5)"><br>
+                <input type="button" value=" " class="bloco" onclick="clicar(6)">
+                <input type="button" value=" " class="bloco" onclick="clicar(7)">
+                <input type="button" value=" " class="bloco" onclick="clicar(8)"><br>
+            </div>
+            <div id="jogador2div">
+                <h2 id="pontosO" class="pontos txt">0</h2><br>
+                <div id="O">
+                    <input type="text" name="jogador2" id="jogador2" value="Jogador O">
+                    O
+                </div>
+            </div>
         </div>
+        
         <div id="rodape">
             <input type="button" value="REINICIAR" id="btn-reiniciar-rodape" onclick="reiniciar()">
         </div>

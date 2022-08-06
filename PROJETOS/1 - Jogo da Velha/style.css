@@ -16,9 +16,8 @@
 }
 
 body {
-    background-color: rgb(26, 26, 26);
+    background-color: rgb(20, 20, 20);
     color: white;
-    margin-left: 20px;
     text-align: center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -46,6 +45,7 @@ body {
 #tabela {
     margin: 30px 0px;
     min-width: 470px;
+    align-self: center;
 }
 
 #menu {
@@ -66,14 +66,78 @@ body {
     margin-right: 20px;
     border-bottom: 2px solid red;
     border-radius: 3px;
+    font-size: 60px;
 }
 
 #pontosO {
     margin-left: 20px;
     border-bottom: 2px solid blue;
     border-radius: 3px;
+    font-size: 60px;
 }
 
 #status {
     font-size: 40px;
+}
+
+#jogo-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+#jogador1div, #jogador2div {
+    min-width: 257px;
+}
+
+#jogador1,
+#jogador2 {
+    width: 150px;
+    height: 30px;
+    margin: 23px;
+    margin-top: 0px;
+    font-size: 16px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 600;
+    color: white;
+    border: 0px;
+    text-indent: 10px;
+    border-radius: 5px;
+    vertical-align: 18px;
+    text-transform: uppercase;
+}
+
+#jogador1:hover, #jogador2:hover {
+    box-shadow: 2px 2px 10px 2px black;
+}
+
+#jogador1 {
+    background-color: rgb(194, 2, 2);
+    margin-left: 0px;
+}
+
+#jogador2 {
+    background-color: blue;
+    margin-right: 0px;
+    direction: rtl;
+    margin-left: 28px;
+}
+
+#X,
+#O {
+    font-size: 70px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+#X {
+    color: red;
+    text-shadow: -7px 1px 5px black;
+}
+
+#O {
+    color: blue;
+    text-shadow: 7px 1px 5px black;
 }
