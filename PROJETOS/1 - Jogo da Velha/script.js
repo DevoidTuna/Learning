@@ -38,15 +38,15 @@ function clicar(i) {
     if(bloco[i].value == ' ') {
         bloco[i].value = jogador
         if(jogador == 'X') {
-            posicoes[i] += 1
+            posicoes[i]++
         } else if(jogador == 'O') {
-            posicoes[i] -= 1
+            posicoes[i]--
         }
         alternador()
         statusTXT.innerHTML = jogador
     }
     jogadas++
-    jogadas > 4 ? checagem() : 
+    jogadas > 4 ? checagem() : null
     pontosXTXT.innerHTML = pontosX
     pontosOTXT.innerHTML = pontosO
 }
@@ -57,15 +57,15 @@ function checagem() {
         let empate = posicoes.every(e => (e) != 0)
         if(check == 3) {
             statusTXT.innerHTML = 'Vitória X'
-            pontosX += 1
+            pontosX++
             destaque(bloco[posicoesVitoria[i][0]], bloco[posicoesVitoria[i][1]], bloco[posicoesVitoria[i][2]])
             break
         } else if(check == -3) {
             statusTXT.innerHTML = 'Vitória O'
-            pontosO += 1
+            pontosO++
             destaque(bloco[posicoesVitoria[i][0]], bloco[posicoesVitoria[i][1]], bloco[posicoesVitoria[i][2]])
             break
-        } else if(empate == true) {
+        } else if(empate) {
             statusTXT.innerHTML = 'EMPATE'
             statusTXT.style.color = 'yellow'
             for(let i = 0; i < 9; i++) {
