@@ -5,6 +5,7 @@ const bloco = document.getElementsByClassName("bloco")
 const pontosXTXT = document.querySelector("#pontosX")
 const pontosOTXT = document.querySelector("#pontosO")
 const btnReiniciar = document.querySelector('#btn-reiniciar-rodape')
+let jogadas = 0
 let jogador = 'X'
 let quemComecou = 'O'
 let pontosX = 0
@@ -27,7 +28,11 @@ const posicoesVitoria = [
     [2, 4, 6]
 ]
 
-reiniciar()
+if(btnReiniciar.value == 'INICIAR') {
+    for(let i = 0; i < 9; i++) {
+        bloco[i].disabled = true
+    }
+}
 
 function clicar(i) {
     if(bloco[i].value == ' ') {
@@ -40,7 +45,8 @@ function clicar(i) {
         alternador()
         statusTXT.innerHTML = jogador
     }
-    checagem()
+    jogadas++
+    jogadas > 4 ? checagem() : 
     pontosXTXT.innerHTML = pontosX
     pontosOTXT.innerHTML = pontosO
 }
@@ -48,7 +54,7 @@ function clicar(i) {
 function checagem() {
     for(let i = 0; i < 8; i++) {
         let check = posicoes[posicoesVitoria[i][0]] + posicoes[posicoesVitoria[i][1]] + posicoes[posicoesVitoria[i][2]]
-        let empate = posicoes.every(e => (e) != 0 && check < 3 && check > -3)
+        let empate = posicoes.every(e => (e) != 0)
         if(check == 3) {
             statusTXT.innerHTML = 'Vitória X'
             pontosX += 1
@@ -73,19 +79,19 @@ function checagem() {
 
 function alternador() {
     if(jogador == 'X') {
-        return jogador = 'O'
+        jogador = 'O'
     } else {
-        return jogador = 'X'
+        jogador = 'X'
     }
 }
 
 function quemComeca() {
     if(quemComecou == 'X') {
         quemComecou = 'O'
-        return jogador = 'O'
+        jogador = 'O'
     } else {
         quemComecou = 'X'
-        return jogador = 'X'
+        jogador = 'X'
     }
 }
 
@@ -122,147 +128,7 @@ function reiniciar() {
         posicoes[i] = 0
     }
     quemComeca()
+    btnReiniciar.value = 'REINICIAR'
     statusTXT.innerHTML = `${jogador} começa`
+    jogadas = 0
 }
-
-/*
-function checar() {
-    let roundWon = false
-    for (let i = 0; i <= 7; i++) {
-        const winCondition = posicoesVitoria[i]
-        let a = posicoes[winCondition[0]]
-        let b = posicoes[winCondition[1]]
-        let c = posicoes[winCondition[2]]
-        if (a === 0 || b === 0 || c === 0) {
-            continue
-        }
-        if (a === b && b === c) {
-            roundWon = true
-            break
-        }
-    }
-    if (roundWon) {
-            statusTXT.innerHTML = `O jogador ${jogador}`
-            return
-    }
-}
-
-function checar2() {
-    for(let i = 0; i <=7; i++) {
-        let posVitoria = posicoesVitoria[i]
-        if((posicoes.includes(posicoesVitoria[i])) == posVitoria) {
-            statusTXT.innerHTML = 'ACERTOOOUUUU'
-        }
-    }
-}
-*/
-
-/*
-Para toda posição de vitória (x1, x2, x3) faça:
-    soma = posicoes[x1] + posicoes[x2] + posicoes[x3]     
-    se soma = 3, então o jogador 1 ganhou (pode por exemplo retornar um objeto com {jogador: 1, posicoes: [x1,x2,x3]})
-    se soma = -3 então o jogador -1 ganhou (pode por exemplo retornar um objeto com {jogador: -1, posicoes: [x1,x2,x3]}) 
-*/
-
-// Fiz o modo mais braçal no momento, conforme vou adquirindo conhecimento e experiencia vou fazer este código de uma forma mais inteligente
-/* function checagem() {
-    if(bloco[0].value == bloco[1].value && bloco[1].value == bloco[2].value) {
-        if(bloco[0].value === 'O') {
-            pontosO += 1
-            statusTXT.innerHTML = 'Vitória O'
-            destaque(bloco[0], bloco[1], bloco[2])
-        } else if(bloco[0].value === 'X'){
-            pontosX += 1
-            statusTXT.innerHTML = 'Vitória X'
-            destaque(bloco[0], bloco[1], bloco[2])
-        }
-
-    } else if(bloco[3].value == bloco[4].value && bloco[4].value == bloco[5].value) {
-        if(bloco[3].value === 'O') {
-            pontosO += 1
-            statusTXT.innerHTML = 'Vitória O'
-            destaque(bloco[3], bloco[4], bloco[5])
-        } else if(bloco[3].value === 'X'){
-            pontosX += 1
-            statusTXT.innerHTML = 'Vitória X'
-            destaque(bloco[3], bloco[4], bloco[5])
-        }
-
-    } else if(bloco[6].value == bloco[7].value && bloco[7].value == bloco[8].value) {
-        if(bloco[6].value === 'O') {
-            pontosO += 1
-            statusTXT.innerHTML = 'Vitória O'
-            destaque(bloco[6], bloco[7], bloco[8])
-        } else if(bloco[6].value === 'X'){
-            pontosX += 1
-            statusTXT.innerHTML = 'Vitória X'
-            destaque(bloco[6], bloco[7], bloco[8])
-        }
-
-    } else if(bloco[0].value == bloco[3].value && bloco[3].value == bloco[6].value) {
-        if(bloco[0].value === 'O') {
-            pontosO += 1
-            statusTXT.innerHTML = 'Vitória O'
-            destaque(bloco[0], bloco[3], bloco[6])
-        } else if(bloco[0].value === 'X'){
-            pontosX += 1
-            statusTXT.innerHTML = 'Vitória X'
-            destaque(bloco[0], bloco[3], bloco[6])
-        }
-
-    } else if(bloco[1].value == bloco[4].value && bloco[4].value == bloco[7].value) {
-        if(bloco[1].value === 'O') {
-            pontosO += 1
-            statusTXT.innerHTML = 'Vitória O'
-            destaque(bloco[1], bloco[4], bloco[7])
-        } else if(bloco[1].value === 'X'){
-            pontosX += 1
-            statusTXT.innerHTML = 'Vitória X'
-            destaque(bloco[1], bloco[4], bloco[7])
-        }
-        
-    } else if(bloco[2].value == bloco[5].value && bloco[5].value == bloco[8].value) {
-        if(bloco[2].value === 'O') {
-            pontosO += 1
-            statusTXT.innerHTML = 'Vitória O'
-            destaque(bloco[2], bloco[5], bloco[8])
-        } else if(bloco[2].value === 'X'){
-            pontosX += 1
-            statusTXT.innerHTML = 'Vitória X'
-            destaque(bloco[2], bloco[5], bloco[8])
-        }
-
-    } else if(bloco[0].value == bloco[4].value && bloco[4].value == bloco[8].value) {
-        if(bloco[0].value === 'O') {
-            pontosO += 1
-            statusTXT.innerHTML = 'Vitória O'
-            destaque(bloco[0], bloco[4], bloco[8])
-        } else if(bloco[0].value === 'X'){
-            pontosX += 1
-            statusTXT.innerHTML = 'Vitória X'
-            destaque(bloco[0], bloco[4], bloco[8])
-        }
-
-    } else if(bloco[2].value == bloco[4].value && bloco[4].value == bloco[6].value) {
-        if(bloco[2].value === 'O') {
-            pontosO += 1
-            statusTXT.innerHTML = 'Vitória O'
-            destaque(bloco[2], bloco[4], bloco[6])
-        } else if(bloco[2].value === 'X'){
-            pontosX += 1
-            statusTXT.innerHTML = 'Vitória X'
-            destaque(bloco[2], bloco[4], bloco[6])
-        }
-
-    } else if((bloco[0].value != ' ') && (bloco[1].value != ' ') && (bloco[2].value != ' ')
-    && (bloco[3].value != ' ') && (bloco[4].value != ' ') && (bloco[5].value != ' ')
-    && (bloco[6].value != ' ') && (bloco[7].value != ' ') && (bloco[8].value != ' ')) {
-        statusTXT.innerHTML = 'EMPATE'
-        statusTXT.style.color = 'yellow'
-        for(let i = 0; i < 9; i++) {
-            bloco[i].style.color = 'yellow'
-            btnReiniciar.style.backgroundColor = '#ffff00'
-            btnReiniciar.style.color = 'black'
-        }
-    }
-} */
