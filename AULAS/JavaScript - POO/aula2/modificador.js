@@ -30,10 +30,18 @@ function capitalizar(vetor) {
     return modificado
 }
 
-function ordenar(vetor) {
-    return vetor.sort(function(a,b){
-        return a.localeCompare(b)
-    })
+function ordenar(colecao, attr) {
+    return attr ?
+    colecao.sort(function(a,b){
+        return typeof a[attr] == 'number' ?
+            a[attr] - b[attr] :
+            a[attr].localeCompare(b[attr])
+    }):
+    colecao.sort(function(a,b){
+        return typeof a == 'number' ?
+            a - b :
+            a.localeCompare(b)
+    });
 }
 
 function caixaAlta(vetor) {
