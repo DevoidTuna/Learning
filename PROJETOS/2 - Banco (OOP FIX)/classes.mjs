@@ -1,20 +1,16 @@
-const contas = {
+const listaUsuarios = [
 
-}
+]
 
-class usuario {
+class Usuario {
     constructor(cpf, nome, identificador) {
         this.cpf = cpf
         this.nome = nome
         this.identificador = identificador
     }
 
-    criarUsuario(cpf, nome, identificador) {
-        this.cpf = cpf
-        this.nome = nome
-        this.identificador = identificador
-
-        contas.push(
+    criarUsuario() {
+        listaUsuarios.push(
             this.identificador = {
                 cpf: this.cpf,
                 nome: this.nome,
@@ -24,7 +20,7 @@ class usuario {
     }
 }
 
-class conta {
+class Conta {
     constructor(saldo, identificador) {
         this.saldo = saldo
         this.identificador = identificador
@@ -47,7 +43,7 @@ class conta {
     }
 }
 
-class contaCorrente extends conta {
+class ContaCorrente extends Conta {
     transferencia(destinatario, valor) {
         if(valor <= this.saldo) {
             
@@ -57,16 +53,27 @@ class contaCorrente extends conta {
     }
 }
 
-class contaPoupanca extends conta {
+class ContaPoupanca extends Conta {
 
 }
 
 // export default {
 //     contaCorrente: contaCorrente,
 //     contaPoupanca: contaPoupanca,
-//     usuario: usuario
+//     Usuario: Usuario
 // }
 
-console.log(contas)
-const patrick  = usuario.criarUsuario(123456789, 'patrick brining', 001)
-console.log(contas)
+console.log(listaUsuarios)
+const patrick = new Usuario(12345678998, 'patrick brining', 001)
+
+patrick.criarUsuario()
+console.log(listaUsuarios)
+
+const joao = new Usuario(123456765432, 'joao vitor', 002)
+joao.criarUsuario()
+
+console.log(listaUsuarios)
+console.log(listaUsuarios[1])
+console.log(listaUsuarios[1]['nome'])
+listaUsuarios.pop()
+console.log(listaUsuarios)
