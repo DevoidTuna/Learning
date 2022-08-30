@@ -3,7 +3,7 @@ const Apresentação = `Bem vindo ao script básico de banco. Caso precise de aj
 const ajuda = () =>
     console.log(
         `
-        Acessar o Usuário -> ListaUsuarios[n°ID] {alterar n°ID pelo número do ID}.
+        Acessar o Usuário -> listaUsuarios[n°ID] {alterar n°ID pelo número do ID}.
         -----------------
         criarUsuario(CPF, 'nome') -> Retornará o ID do Usuário caso seu CPF já esteja cadastrado,
         ou criará um novo Usuário.
@@ -20,7 +20,7 @@ const ajuda = () =>
         Usuario.ContaCorrente.transferencia(valor, n°ContaDoDestinatario) -> Transferências apenas de Contas
         Correntes para qualquer tipo de Conta, ao qual informa o valor da transferência em "valor" e o n° da
         Conta do Destinatário.
-        EX: ListaUsuarios[ID].ContaCorrente.transferencia(100, 2003) - {transferido R$ 100 para a Conta 2003}.
+        EX: listaUsuarios[ID].ContaCorrente.transferencia(100, 2003) - {transferido R$ 100 para a Conta 2003}.
         -----------------
         Usuario.ContaXXX.deposito(valor) -> Deposita o "valor" na Conta informada.
         -----------------
@@ -29,7 +29,7 @@ const ajuda = () =>
 
 console.log(Apresentação)
 
-const ListaUsuarios = [
+const listaUsuarios = [
     // UsuarioMaster = {id: 999, cpf: 99999999999, nome: 'Master',
     // ContaCorrente: {id: 1999, saldo: 99999999}, 
     // ContaPoupanca:{id: 2999, saldo: 99999999}}
@@ -92,8 +92,8 @@ class ContaCorrente extends _Conta {
     }
 
     transferencia(valor, destinatarioConta) {
-        let filtroCorrente = ListaUsuarios.filter(usuario => destinatarioConta == usuario.ContaCorrente.id)
-        let filtroPoupanca = ListaUsuarios.filter(usuario => destinatarioConta == usuario.ContaPoupanca.id)
+        let filtroCorrente = listaUsuarios.filter(conta => (conta.ContaCorrente != null) && destinatarioConta == conta.ContaCorrente.id)
+        let filtroPoupanca = listaUsuarios.filter(conta => (conta.ContaPoupanca != null) && destinatarioConta == conta.ContaPoupanca.id)
 
         if(filtroCorrente.length > 0 || filtroPoupanca.length > 0) {
 
@@ -124,15 +124,15 @@ class ContaPoupanca extends _Conta {
 }
 
 function criarUsuario(cpfInformado, nome) {
-    let filtro = ListaUsuarios.filter(usuario => cpfInformado == usuario.cpf)
+    let filtro = listaUsuarios.filter(usuario => cpfInformado == usuario.cpf)
 
     if(filtro.length > 0) {
         return console.log(`Este usuario já está cadastrado. ID: ${filtro[0].id} \n`)
     } else {
-        ListaUsuarios.push(
+        listaUsuarios.push(
             new Usuario(cpfInformado, nome)
         )
-        let novoUser = ListaUsuarios.filter(usuario => cpfInformado == usuario.cpf)
+        let novoUser = listaUsuarios.filter(usuario => cpfInformado == usuario.cpf)
         console.log(`Novo Usuário. ID: ${novoUser[0].id}, nome: ${novoUser[0].nome} \n`)
         contUsuario++
     }
@@ -140,13 +140,13 @@ function criarUsuario(cpfInformado, nome) {
 
 function buscaUsuario(busca) {
     if(typeof busca == "string") {
-        for(users in ListaUsuarios) {
-            if(busca == ListaUsuarios[users].nome) {
-                console.log(`Usuário encontrado: ID: ${ListaUsuarios[users].id}, Nome: ${ListaUsuarios[users].nome}, CPF: ${ListaUsuarios[users].cpf};`)
+        for(users in listaUsuarios) {
+            if(busca == listaUsuarios[users].nome) {
+                console.log(`Usuário encontrado: ID: ${listaUsuarios[users].id}, Nome: ${listaUsuarios[users].nome}, CPF: ${listaUsuarios[users].cpf};`)
             }
         }
     } else {
-        let filtro = ListaUsuarios.filter(usuario => busca == usuario.id || busca == usuario.cpf)
+        let filtro = listaUsuarios.filter(usuario => busca == usuario.id || busca == usuario.cpf)
         if(filtro.length > 0) {
             console.log(`Usuário encontrado. ID: ${filtro[0].id}, Nome: ${filtro[0].nome}, CPF: ${filtro[0].cpf} \n`)
         } else {
